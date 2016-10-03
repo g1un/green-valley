@@ -1,0 +1,35 @@
+/*nav*/
+.nav {
+
+  @media (min-width: $width-lg) {
+    &.collapse {
+      display: block;
+    }
+  }
+
+  &__list {
+    font-size: 0;
+  }
+
+  &__item {
+    line-height: 0;
+    text-align: center;
+
+    @media (min-width: $width-lg) {
+      display: inline-block;
+      vertical-align: top;
+
+      min-width: 75px;
+    }
+  }
+
+  &__link {
+    display: block;
+
+    @media (min-width: $width-lg) {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+}
+/*end of nav*/

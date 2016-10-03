@@ -1,0 +1,36 @@
+doctype html
+html
+	head
+		title «Green Valley»
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		link(rel='stylesheet', type='text/css', href='css/style.css')
+	body
+		header.header.container-fluid
+			div.col-lg-2.col-xs-8.col-xs-offset-2.col-lg-offset-0
+				a(href='#').logo.header__logo
+					img(src='img/logo.png')
+			div.sandwich.header__sandwich(data-toggle="collapse", data-target='.nav')
+			nav.nav.header__nav.collapse.col-lg-5
+				ul.nav__list
+					li.nav__item
+						a.nav__link.title-common.title-common--nav(href='#') Номера
+					li.nav__item
+						a.nav__link.title-common.title-common--nav(href='#') Коттедж
+					li.nav__item
+						a.nav__link.title-common.title-common--nav(href='#') Ресторан
+					li.nav__item
+						a.nav__link.title-common.title-common--nav(href='#') Отдых
+					li.nav__item
+						a.nav__link.title-common.title-common--nav(href='#') Контакты
+			div.col-lg-3.visible-lg-block
+				div.text-header.header__tel +7 812 777-55-88
+				div.text-common г. Санкт-Петербург, Приморское ш.600
+			div.col-lg-2.visible-lg-block
+				a(href='#').button-link.header__button Забронировать
+					i.fa.fa-calendar-o
+
+		script(src='../bower_components/jquery/dist/jquery.min.js')
+		script(src="../bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js")
+		script(src="../bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js")
+		//script(src='js/jquery-3.0.0.min.js')

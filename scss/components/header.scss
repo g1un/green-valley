@@ -1,0 +1,35 @@
+/*header*/
+.header {
+  height: 5.625 * $base-font-size;
+  background: #fff;
+
+  &__logo {
+    margin: $base-font-size 0 0;
+  }
+
+  &__nav {
+    margin: 5.625 * $base-font-size 0 0;
+
+    @media (min-width: $width-lg) {
+      margin: 2.125 * $base-font-size 0 0;
+    }
+  }
+
+  &__tel{
+    margin: 1.375 * $base-font-size 0 0;
+  }
+
+  &__button {
+    display: block;
+    float: right;
+
+    margin: 1.625 * $base-font-size 0 0;
+  }
+
+  &__sandwich {
+    float: right;
+
+    margin: 2.125 * $base-font-size 0;
+  }
+}
+/*end of header*/

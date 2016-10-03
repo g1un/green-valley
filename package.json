@@ -1,0 +1,22 @@
+{
+  "name": "green-valley",
+  "version": "1.0.0",
+  "description": "bootstrap example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "g1un",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.4.1",
+    "browser-sync": "^2.16.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-img64": "0.0.6",
+    "gulp-jade": "^1.1.0",
+    "gulp-postcss": "^6.2.0",
+    "gulp-sass": "^2.3.2",
+    "postcss-assets": "^4.1.0"
+  }
+}

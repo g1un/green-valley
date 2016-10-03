@@ -1,0 +1,34 @@
+/*style*/
+
+/*bootstrap*/
+@import "../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+
+/*font-awesome*/
+@import "font-awesome/scss/font-awesome";
+
+@import "components/variables";
+@import "components/general";
+@import "components/fonts";
+
+@import "components/header";
+@import "components/logo";
+@import "components/nav";
+@import "components/typography";
+@import "components/button";
+@import "components/sandwich";
+//@import "components/breadcrumbs";
+//@import "components/promo";
+//@import "components/callback";
+//@import "components/realty";
+//@import "components/services";
+//@import "components/footer";
+//@import "components/contact";
+//@import "components/company";
+//@import "components/realty-list";
+//@import "components/filter";
+//@import "components/list";
+//@import "components/list-item";
+//@import "components/pagination";
+//@import "components/realty-item";
+//@import "components/suggestions";
+/*end of style*/

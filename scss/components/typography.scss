@@ -1,0 +1,63 @@
+/*typography*/
+/*text-common*/
+%text-common {
+  font-family: $fira-sans-reg;
+  font-size: $text-common-font-size;
+  line-height: 1.5rem;
+  color: $text-common-color;
+}
+
+.text-common {
+  @extend %text-common;
+}
+/*end of text-common*/
+
+/*title-common*/
+.title-common {
+  @extend %text-common;
+
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    font-family: $fira-sans-med;
+    color: $title-common-color-hover;
+    text-decoration: none;
+  }
+
+  &--nav {
+    line-height: 2rem;
+
+    @media (min-width: $width-lg) {
+      line-height: 1.5rem;
+    }
+  }
+}
+/*end of title-common*/
+
+/*text-header*/
+.text-header {
+  font-family: $pt-sans-caption-bold;
+  font-size: $text-header-font-size;
+  color: $text-common-color;
+  line-height: 1.5rem;
+}
+/*end of text-header*/
+
+/*title-section*/
+//.title-section {
+//  font-family: $pt-sans-caption-bold;
+//  font-size: $title-section-font-size;
+//  color: $title-common-color;
+//  text-decoration: none;
+//
+//  &:hover,
+//  &:focus {
+//    font-family: $fira-sans-med;
+//    color: $title-section-color-hover;
+//    text-decoration: none;
+//  }
+//}
+/*end of title-section*/
+/*end of typography*/

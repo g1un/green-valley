@@ -1,0 +1,25 @@
+/*variables*/
+/*font-family*/
+$fira-sans-reg: FiraSans-Regular, sans-serif;
+$fira-sans-med: FiraSans-Medium, sans-serif;
+$pt-sans-caption-bold: PT-Sans-Caption-Bold, sans-serif;
+/*end of font-family*/
+
+/*font-size*/
+$base-font-size: 16px;
+$text-common-font-size: $base-font-size - 2px;
+$title-section-font-size: $base-font-size * 2 - 2px;
+$text-header-font-size: $base-font-size + 2px;
+/*end of font-size*/
+
+/*color*/
+$text-common-color: #191919;
+$accent-color: #ff7435;
+$title-common-color-hover: $accent-color;
+/*end of color*/
+
+/*width*/
+$width-lg: 1200px;
+$width-md: 768px;
+/*end of width*/
+/*end of variables*/
