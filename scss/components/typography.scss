@@ -19,19 +19,27 @@
   text-transform: uppercase;
   text-decoration: none;
 
-  &:hover,
-  &:focus {
-    font-family: $fira-sans-med;
-    color: $title-common-color-hover;
-    text-decoration: none;
-  }
-
   &--nav {
     line-height: 2rem;
+
+    &:hover,
+    &:focus {
+      font-family: $fira-sans-med;
+      color: $title-common-color-hover;
+      text-decoration: none;
+    }
 
     @media (min-width: $width-lg) {
       line-height: 1.5rem;
     }
+  }
+
+  &--med {
+    font-family: $fira-sans-med;
+  }
+
+  &--white {
+    color: #fff;
   }
 }
 /*end of title-common*/

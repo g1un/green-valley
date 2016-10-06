@@ -1,7 +1,51 @@
 /*button*/
+
+@mixin button (
+  $display: null,
+  $line-height: null,
+  $p-left: null,
+  $p-right: null,
+  $background: null
+) {
+  @if $display == null { display: table; } @else { display: $display; }
+
+  position: relative;
+
+  @if $line-height != null { line-height: $line-height; }
+
+  @if $p-left != null { padding-left: $p-left; }
+  @if $p-right != null { padding-right: $p-right; }
+
+  @if $background != '' { background: $background; }
+}
+
+@mixin border ($style,  $sides){
+
+  @if ($style != "") {
+
+    @if ($sides == "") {
+
+      border: $style;
+
+    } @else {
+
+      @each $side in $sides {
+
+        @if (
+          $side == 'top' or
+          $side == 'right' or
+          $side == 'bottom' or
+          $side == 'left'
+        ) {
+          border-#{$side}: $style;
+        }
+      }
+    }
+  }
+}
+
 .button-link {
-  @include button-variant(#fff, $accent-color, $accent-color);
-  @include button-size(0, 1.25*$base-font-size, $text-common-font-size, 2.25rem, 2.25*$base-font-size);
+  @include button(null, 2.25 * $base-font-size, null, null, $accent-color);
 
   font-family: $fira-sans-med;
   text-transform: uppercase;

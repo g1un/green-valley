@@ -7,6 +7,8 @@
 
   text-align: center;
 
+  @include sprite($logo);
+
   @media (min-width: $width-lg) {
     text-align: left;
   }

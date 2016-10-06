@@ -5210,6 +5210,52 @@ tbody.collapse.in {
   content: "";
 }
 
+/*sprite*/
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
 /*variables*/
 /*font-family*/
 /*end of font-family*/
@@ -5317,6 +5363,10 @@ body {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  background-image: url(../img/sprite.png);
+  background-position: 0px 0px;
+  width: 143px;
+  height: 49px;
 }
 
 @media (min-width: 1200px) {
@@ -5378,20 +5428,28 @@ body {
   text-decoration: none;
 }
 
-.title-common:hover, .title-common:focus {
+.title-common--nav {
+  line-height: 2rem;
+}
+
+.title-common--nav:hover, .title-common--nav:focus {
   font-family: FiraSans-Medium, sans-serif;
   color: #ff7435;
   text-decoration: none;
-}
-
-.title-common--nav {
-  line-height: 2rem;
 }
 
 @media (min-width: 1200px) {
   .title-common--nav {
     line-height: 1.5rem;
   }
+}
+
+.title-common--med {
+  font-family: FiraSans-Medium, sans-serif;
+}
+
+.title-common--white {
+  color: #fff;
 }
 
 /*end of title-common*/
@@ -5409,63 +5467,12 @@ body {
 /*end of typography*/
 /*button*/
 .button-link {
-  color: #fff;
-  background-color: #ff7435;
-  border-color: #ff7435;
-  padding: 0 20px;
-  font-size: 14px;
-  line-height: 2.25rem;
-  -webkit-border-radius: 36px;
-     -moz-border-radius: 36px;
-          border-radius: 36px;
+  display: table;
+  position: relative;
+  line-height: 36px;
+  background: #ff7435;
   font-family: FiraSans-Medium, sans-serif;
   text-transform: uppercase;
-}
-
-.button-link:focus, .button-link.focus {
-  color: #fff;
-  background-color: #ff5102;
-  border-color: #b53800;
-}
-
-.button-link:hover {
-  color: #fff;
-  background-color: #ff5102;
-  border-color: #f74d00;
-}
-
-.button-link:active, .button-link.active,
-.open > .button-link.dropdown-toggle {
-  color: #fff;
-  background-color: #ff5102;
-  border-color: #f74d00;
-}
-
-.button-link:active:hover, .button-link:active:focus, .button-link:active.focus, .button-link.active:hover, .button-link.active:focus, .button-link.active.focus,
-.open > .button-link.dropdown-toggle:hover,
-.open > .button-link.dropdown-toggle:focus,
-.open > .button-link.dropdown-toggle.focus {
-  color: #fff;
-  background-color: #dd4500;
-  border-color: #b53800;
-}
-
-.button-link:active, .button-link.active,
-.open > .button-link.dropdown-toggle {
-  background-image: none;
-}
-
-.button-link.disabled:hover, .button-link.disabled:focus, .button-link.disabled.focus, .button-link[disabled]:hover, .button-link[disabled]:focus, .button-link[disabled].focus,
-fieldset[disabled] .button-link:hover,
-fieldset[disabled] .button-link:focus,
-fieldset[disabled] .button-link.focus {
-  background-color: #ff7435;
-  border-color: #ff7435;
-}
-
-.button-link .badge {
-  color: #ff7435;
-  background-color: #fff;
 }
 
 .button-link:hover, .button-link:focus {
